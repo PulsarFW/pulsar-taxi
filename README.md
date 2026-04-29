@@ -21,7 +21,7 @@ Taxi job system for Pulsar Framework with a React NUI dispatch panel for accepti
 
 ## License
 
-Copyright © 2024 Pulsar Framework. All rights reserved.
+Copyright © 2026 Pulsar Framework. All rights reserved.
 
 <div align="center">
 
