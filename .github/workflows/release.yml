@@ -3,7 +3,7 @@ name: Create release
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 permissions:
   contents: write
@@ -35,7 +35,7 @@ jobs:
         run: |
           mkdir -p ./temp/pulsar-taxi
           cp ./{README.md,fxmanifest.lua} ./temp/pulsar-taxi
-          cp -r ./{client,ui} ./temp/pulsar-taxi
+          cp -r ./{client,server,ui} ./temp/pulsar-taxi
           rm -rf ./temp/pulsar-taxi/ui/node_modules
           cd ./temp && zip -r ../pulsar-taxi.zip ./pulsar-taxi
 
