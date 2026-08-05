@@ -1,0 +1,42 @@
+@font-face {
+	font-family: 'LCD';
+	src: url('./assets/fonts/lcd.ttf') format('truetype');
+	font-display: swap;
+}
+
+:root {
+	--color-primary: #b40000;
+	--color-primary-light: #ff2100;
+	--color-primary-dark: #560000;
+	--color-panel: #000000;
+	--color-text: #ffffff;
+	--color-text-muted: #9a9a9a;
+	--color-border: rgba(255, 255, 255, 0.12);
+
+	--font-display: 'LCD', monospace;
+	--font-body: 'Oswald', -apple-system, BlinkMacSystemFont, sans-serif;
+
+	--radius: 4px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: transparent;
+	font-family: var(--font-body);
+	color: var(--color-text);
+	user-select: none;
+}
+
+#app {
+	width: 100vw;
+	height: 100vh;
+}

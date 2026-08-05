@@ -1,31 +1,56 @@
 <div align="center">
-  <img src="https://r2.fivemanage.com/GPYOH8Hq4GPyAY7czrgLe/pulsarbanner.png" alt="Pulsar Framework" width="100%">
+
+<img src="https://r2.fivemanage.com/GPYOH8Hq4GPyAY7czrgLe/pulsarbanner.png" alt="Pulsar Framework" width="100%" />
+
+<br/>
 
 # PULSAR-TAXI
-**Player-driven taxi job with NUI dispatch interface for Pulsar Framework**
 
-[![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white)]()
-[![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)]()
-[![FiveM](https://img.shields.io/badge/FiveM-F40552?style=flat-square)]()
+### Taxi meter — distance-based fare HUD for configured taxi vehicle models
 
-[Overview](#overview) • [Dependencies](#dependencies) • [License](#license)
+<br/>
+
+![Lua](https://img.shields.io/badge/Lua_5.4-2C2D72?style=flat-square&logo=lua&logoColor=white)
+![Svelte](https://img.shields.io/badge/Svelte_5-FF3E00?style=flat-square&logo=svelte&logoColor=white)
+![FiveM](https://img.shields.io/badge/FiveM-F40552?style=flat-square)
+
+<br/>
+
+<sub>Enjoy the framework? A coffee helps keep active development, hardening, and support going.</sub>
+
+<a href="https://buymeacoffee.com/pulsarframework"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 180px !important;" /></a>
+
+<br/>
+
+[Overview](#overview) · [Dependencies](#dependencies)
+
 </div>
+
+---
 
 ## Overview
 
-Taxi job system for Pulsar Framework with a React NUI dispatch panel for accepting and tracking fares. Supports job-locked access and configurable fare rates.
+Client-only meter for the vehicle models listed in `client/config.lua`. Shows the fare HUD when you sit in a taxi's driver seat (via `Vehicles:Client:EnterVehicle`), tracks distance to compute the running fare, and exposes keybinds for rate up/down and trip reset. NUI is Svelte + TypeScript, built with Vite/Bun; the full message contract (`APP_SHOW`/`APP_HIDE`/`APP_RESET`/`SET_RATE`/`RESET_TRIP`/`UPDATE_TRIP`) lives in `ui/src/lib/store/taxi.svelte.ts`.
+
+---
 
 ## Dependencies
 
-- [pulsar-core](https://github.com/PulsarFW/pulsar-core)
+- `pulsar_core` — framework core
+- `pulsar_pwnzor` — anti-cheat check loaded alongside every resource
+- `pulsar_vehicles` — fires `Vehicles:Client:EnterVehicle`/`ExitVehicle`, the events this resource hooks
+
+---
 
 ## License
 
-Copyright © 2026 Pulsar Framework. All rights reserved.
+This resource is free to use and modify under the [Pulsar Framework License](LICENSE.md). Redistribution is welcome as long as it stays free — selling this resource or any derivative of it requires written permission from the Pulsar Framework team.
+
+---
 
 <div align="center">
 
-[![Pulsar Framework](https://img.shields.io/badge/Pulsar-Framework-7c3aed?style=flat-square)]()
-[![Built for FiveM](https://img.shields.io/badge/Built_for-FiveM-F40552?style=flat-square)]()
+![Pulsar Framework](https://img.shields.io/badge/Pulsar-Framework-7c3aed?style=flat-square)
+![Built for FiveM](https://img.shields.io/badge/Built_for-FiveM-F40552?style=flat-square)
 
 </div>

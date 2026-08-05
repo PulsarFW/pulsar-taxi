@@ -2,16 +2,16 @@ local _inVeh = nil
 
 AddEventHandler("Vehicles:Client:EnterVehicle", function(currentVehicle, currentSeat)
 	if currentSeat == -1 and _models[GetEntityModel(currentVehicle)] then
-		exports['pulsar-taxi']:HudShow()
+		plsr.Taxi.Hud:Show()
 	end
 end)
 
 AddEventHandler("Vehicles:Client:ExitVehicle", function()
 	_inVeh = nil
-	exports['pulsar-taxi']:HudHide()
+	plsr.Taxi.Hud:Hide()
 end)
 
 RegisterNetEvent("UI:Client:Reset", function(force)
 	_inVeh = nil
-	exports['pulsar-taxi']:HudReset()
+	plsr.Taxi.Hud:Reset()
 end)
